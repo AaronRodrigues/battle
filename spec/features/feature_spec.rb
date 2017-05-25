@@ -13,10 +13,18 @@ feature 'See player 2s Hit Points' do
 end
 
 feature 'Attack player 2' do
-  scenario 'confirms decrease in hitpoints for Player 2' do
+  scenario 'confirms Player 2 has been attacked' do
   	sign_in_and_play
   	click_button('Attack') 
-  	expect(page).to have_content 'Mittens: HitPoints decrease by 20, Mittens: 60HP'
+  	expect(page).to have_content 'attacked'
+  end
+end
+
+feature 'Attack player 2' do
+  scenario 'confirms decrease in hitpoints for Player 2' do
+    sign_in_and_play
+    click_button('Attack') 
+    expect(page).to have_content '90'
   end
 end
 
