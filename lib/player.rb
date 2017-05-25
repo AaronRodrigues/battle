@@ -8,12 +8,4 @@ class Player
     @hitpoints = DEFAULT_HP
   end
 
-  def attack(opponent)
-    opponent.take_damage
-  end
-
-  def take_damage
-    @hitpoints -= 10
-  end
-
 end

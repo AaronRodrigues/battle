@@ -14,9 +14,5 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it ' HP should decrease by 10' do
-      expect { player2.attack(player) }.to change { player.hitpoints }. by -10
-    end
-  end
+
 end
