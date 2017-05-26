@@ -33,6 +33,6 @@ feature 'Switching turns between players to continue battle ' do
     sign_in_and_play
     click_button('Attack')
     click_button('OK')
-    expect(page).to have_content 'Turn: Player 2!'
+    expect(page).to have_content "Turn: Mittens!"
   end
 end

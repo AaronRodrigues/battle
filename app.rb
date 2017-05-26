@@ -27,7 +27,9 @@ enable :sessions
   end
 
   get '/attack' do
-    $game.attack($game.player_2)
+    
+    $game.attack($game.change_turn)
+
     erb :attack
   end
 

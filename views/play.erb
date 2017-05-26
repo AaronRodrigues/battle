@@ -1,9 +1,9 @@
-
+<p>Turn: <%= $game.turn.name %>! </p>
 <p>
 <%= $game.player_1.name %> vs. <%= $game.player_2.name %>
 </p>
 
-<%= $game.player_2.name %> <%= $game.player_2.hitpoints %>HP
+<%= $game.turn.name %> <%= $game.turn.hitpoints %>HP
 
 <form action="/attack" method='get'>
 <input type="submit" value="Attack">
