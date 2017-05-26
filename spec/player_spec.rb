@@ -14,5 +14,11 @@ describe Player do
     end
   end
 
+  describe '#take_damage' do
+  	it 'should take 10 points of damage from HP' do
+  		expect{player.take_damage}.to change{player.hitpoints}.by -10
+  	end
+  end
+
 
 end
