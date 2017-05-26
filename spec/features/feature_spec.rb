@@ -27,3 +27,12 @@ feature 'Attack player 2' do
     expect(page).to have_content '90'
   end
 end
+
+feature 'Switching turns between players to continue battle ' do
+  scenario 'When Player 1 finishes attack, switch turn to Player 2' do
+    sign_in_and_play
+    click_button('Attack')
+    click_button('OK')
+    expect(page).to have_content 'Turn: Player 2!'
+  end
+end

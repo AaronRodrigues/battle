@@ -12,7 +12,6 @@ enable :sessions
   end
 
   get '/names' do
-    @name = params[:name]
     erb :index
   end
 
@@ -24,14 +23,12 @@ enable :sessions
   end
 
   get '/play' do
-
-  erb :play
-end
+    erb :play
+  end
 
   get '/attack' do
-
-  $game.attack($game.player_2)
-  erb :attack
+    $game.attack($game.player_2)
+    erb :attack
   end
 
    run! if app_file == $0
