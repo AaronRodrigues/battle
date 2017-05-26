@@ -24,15 +24,13 @@ enable :sessions
   end
 
   get '/play' do
-  @player_1 = $player_1
-  @player_2 = $player_2
+
   erb :play
 end
 
   get '/attack' do
-  @player_1 = $player_1
-  @player_2 = $player_2
-  Game.new.attack(@player_2)
+
+  $game.attack($game.player_2)
   erb :attack
   end
 
