@@ -36,3 +36,11 @@ feature 'Switching turns between players to continue battle ' do
     expect(page).to have_content "Turn: Mittens!"
   end
 end
+
+feature 'Player loses game if HP reaches 0' do
+  scenario 'Player 2 loses game' do
+    sign_in_and_play
+    19.times { attack_and_click_ok }
+    expect(page).to have_content "Lose"
+  end
+end
